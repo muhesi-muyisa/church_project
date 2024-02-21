@@ -1,0 +1,2 @@
+// Programme 
+CREATE VIEW programmes as (SELECT programme.idProgramme id,programme.titreProgramme titre,programme.dateExecution _date,categorie.idCategorie idCat,categorie.designation categories,titrechant.idTitre num,titrechant.titre titreChant,titrechant.couplet couplets,detailprogramme.idDetail idDeatail, detailprogramme.categirie caneva FROM titrechant,programme,detailprogramme,categorie WHERE titrechant.idTitre=detailprogramme.chants AND programme.idProgramme=detailprogramme.idProgramme AND categorie.idCategorie=programme.idCategorie)
