@@ -90,6 +90,6 @@ E:\Programmation\Windows\appProramme_messe\appProramme_messe\obj\Debug\appProram
 E:\Programmation\Windows\appProramme_messe\appProramme_messe\obj\Debug\appProramme_messe.Forms.Fr_Programmes.resources
 E:\Programmation\Windows\appProramme_messe\appProramme_messe\obj\Debug\appProramme_messe.Forms.Programmes.resources
 E:\Programmation\Windows\appProramme_messe\appProramme_messe\obj\Debug\appProramme_messe.csprojResolveAssemblyReference.cache
-E:\Programmation\Windows\appProramme_messe\appProramme_messe\obj\Debug\appProramme_messe.Form4.resources
 E:\Programmation\Windows\appProramme_messe\appProramme_messe\obj\Debug\RdlCompile.cache
 E:\Programmation\Windows\appProramme_messe\appProramme_messe\obj\Debug\RdlCompile.compiled
+E:\Programmation\Windows\appProramme_messe\appProramme_messe\obj\Debug\appProramme_messe.Form4.resources

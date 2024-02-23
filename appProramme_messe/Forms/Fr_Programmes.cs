@@ -31,11 +31,11 @@ namespace appProramme_messe.Forms
                     db.Open();
                     MySqlCommand cmd = new MySqlCommand("SELECT * FROM programmes WHERE id='" + int.Parse(textBox1.Text) + "'", db);
                     MySqlDataAdapter ada = new MySqlDataAdapter(cmd);
-                    DataSet1 ds = new DataSet1();
-                    ada.Fill(ds, "programmes");
-                    fcli.SetDataSource(ds.Tables["programmes"]);
-                    crystalReportViewer1.ReportSource = fcli;
-                    crystalReportViewer1.Refresh();
+                    //DataSet1 ds = new DataSet1();
+                    //ada.Fill(ds, "programmes");
+                    //fcli.SetDataSource(ds.Tables["programmes"]);
+                    //crystalReportViewer1.ReportSource = fcli;
+                    //crystalReportViewer1.Refresh();
                 }
                 catch (Exception ex)
                 {

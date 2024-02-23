@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dat" targetNamespace="http://tempuri.org/dat.xsd" xmlns:mstns="http://tempuri.org/dat.xsd" xmlns="http://tempuri.org/dat.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="programme_sjConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="programme_sjConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.appProramme_messe.Properties.Settings.GlobalReference.Default.programme_sjConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="programmesTableAdapter" GeneratorDataComponentClassName="programmesTableAdapter" Name="programmes" UserDataComponentName="programmesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="programme_sjConnectionString (Settings)" DbObjectName="programme_sj.programmes" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `id`, `titre`, `_date`, `idCat`, `categories`, `num`, `titreChant`, `couplets`, `idDeatail`, `caneva` FROM `programme_sj`.`programmes`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="titre" DataSetColumn="titre" />
+              <Mapping SourceColumn="_date" DataSetColumn="_date" />
+              <Mapping SourceColumn="idCat" DataSetColumn="idCat" />
+              <Mapping SourceColumn="categories" DataSetColumn="categories" />
+              <Mapping SourceColumn="num" DataSetColumn="num" />
+              <Mapping SourceColumn="titreChant" DataSetColumn="titreChant" />
+              <Mapping SourceColumn="couplets" DataSetColumn="couplets" />
+              <Mapping SourceColumn="idDeatail" DataSetColumn="idDeatail" />
+              <Mapping SourceColumn="caneva" DataSetColumn="caneva" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="programme_sjConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT programme.idProgramme id,programme.titreProgramme titre,programme.dateExecution _date,categorie.idCategorie idCat,categorie.designation categories,titrechant.idTitre num,titrechant.titre titreChant,titrechant.couplet couplets,detailprogramme.idDetail idDeatail, detailprogramme.categirie caneva FROM titrechant,programme,detailprogramme,categorie WHERE titrechant.idTitre=detailprogramme.chants AND programme.idProgramme=detailprogramme.idProgramme AND categorie.idCategorie=programme.idCategorie AND programme.idProgramme=@jjj</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="jjj" ColumnName="idProgramme" DataSourceName="programme_sj.programme" DataTypeServer="int(11)" DbType="Int32" Direction="Input" ParameterName="@jjj" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="titre" DataSetColumn="titre" />
+              <Mapping SourceColumn="_date" DataSetColumn="_date" />
+              <Mapping SourceColumn="idCat" DataSetColumn="idCat" />
+              <Mapping SourceColumn="categories" DataSetColumn="categories" />
+              <Mapping SourceColumn="num" DataSetColumn="num" />
+              <Mapping SourceColumn="titreChant" DataSetColumn="titreChant" />
+              <Mapping SourceColumn="couplets" DataSetColumn="couplets" />
+              <Mapping SourceColumn="idDeatail" DataSetColumn="idDeatail" />
+              <Mapping SourceColumn="caneva" DataSetColumn="caneva" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dat" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dat" msprop:Generator_UserDSName="dat">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="programmes" msprop:Generator_TableClassName="programmesDataTable" msprop:Generator_TableVarName="tableprogrammes" msprop:Generator_TablePropName="programmes" msprop:Generator_RowDeletingName="programmesRowDeleting" msprop:Generator_RowChangingName="programmesRowChanging" msprop:Generator_RowEvHandlerName="programmesRowChangeEventHandler" msprop:Generator_RowDeletedName="programmesRowDeleted" msprop:Generator_UserTableName="programmes" msprop:Generator_RowChangedName="programmesRowChanged" msprop:Generator_RowEvArgName="programmesRowChangeEvent" msprop:Generator_RowClassName="programmesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="titre" msprop:Generator_ColumnVarNameInTable="columntitre" msprop:Generator_ColumnPropNameInRow="titre" msprop:Generator_ColumnPropNameInTable="titreColumn" msprop:Generator_UserColumnName="titre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="_date" msprop:Generator_ColumnVarNameInTable="column_date" msprop:Generator_ColumnPropNameInRow="_date" msprop:Generator_ColumnPropNameInTable="_dateColumn" msprop:Generator_UserColumnName="_date" type="xs:dateTime" />
+              <xs:element name="idCat" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidCat" msprop:Generator_ColumnPropNameInRow="idCat" msprop:Generator_ColumnPropNameInTable="idCatColumn" msprop:Generator_UserColumnName="idCat" type="xs:int" />
+              <xs:element name="categories" msprop:Generator_ColumnVarNameInTable="columncategories" msprop:Generator_ColumnPropNameInRow="categories" msprop:Generator_ColumnPropNameInTable="categoriesColumn" msprop:Generator_UserColumnName="categories">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="num" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnnum" msprop:Generator_ColumnPropNameInRow="num" msprop:Generator_ColumnPropNameInTable="numColumn" msprop:Generator_UserColumnName="num" type="xs:int" />
+              <xs:element name="titreChant" msprop:Generator_ColumnVarNameInTable="columntitreChant" msprop:Generator_ColumnPropNameInRow="titreChant" msprop:Generator_ColumnPropNameInTable="titreChantColumn" msprop:Generator_UserColumnName="titreChant">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="couplets" msprop:Generator_ColumnVarNameInTable="columncouplets" msprop:Generator_ColumnPropNameInRow="couplets" msprop:Generator_ColumnPropNameInTable="coupletsColumn" msprop:Generator_UserColumnName="couplets">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="65535" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idDeatail" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidDeatail" msprop:Generator_ColumnPropNameInRow="idDeatail" msprop:Generator_ColumnPropNameInTable="idDeatailColumn" msprop:Generator_UserColumnName="idDeatail" type="xs:int" />
+              <xs:element name="caneva" msprop:Generator_ColumnVarNameInTable="columncaneva" msprop:Generator_ColumnPropNameInRow="caneva" msprop:Generator_ColumnPropNameInTable="canevaColumn" msprop:Generator_UserColumnName="caneva">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="titre" msprop:Generator_ColumnVarNameInTable="columntitre" msprop:Generator_ColumnPropNameInRow="titre" msprop:Generator_ColumnPropNameInTable="titreColumn" msprop:Generator_UserColumnName="titre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="_date" msprop:Generator_ColumnVarNameInTable="column_date" msprop:Generator_ColumnPropNameInRow="_date" msprop:Generator_ColumnPropNameInTable="_dateColumn" msprop:Generator_UserColumnName="_date" type="xs:dateTime" />
+              <xs:element name="idCat" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidCat" msprop:Generator_ColumnPropNameInRow="idCat" msprop:Generator_ColumnPropNameInTable="idCatColumn" msprop:Generator_UserColumnName="idCat" type="xs:int" />
+              <xs:element name="categories" msprop:Generator_ColumnVarNameInTable="columncategories" msprop:Generator_ColumnPropNameInRow="categories" msprop:Generator_ColumnPropNameInTable="categoriesColumn" msprop:Generator_UserColumnName="categories">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="num" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnnum" msprop:Generator_ColumnPropNameInRow="num" msprop:Generator_ColumnPropNameInTable="numColumn" msprop:Generator_UserColumnName="num" type="xs:int" />
+              <xs:element name="titreChant" msprop:Generator_ColumnVarNameInTable="columntitreChant" msprop:Generator_ColumnPropNameInRow="titreChant" msprop:Generator_ColumnPropNameInTable="titreChantColumn" msprop:Generator_UserColumnName="titreChant">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="couplets" msprop:Generator_ColumnVarNameInTable="columncouplets" msprop:Generator_ColumnPropNameInRow="couplets" msprop:Generator_ColumnPropNameInTable="coupletsColumn" msprop:Generator_UserColumnName="couplets">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="65535" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idDeatail" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidDeatail" msprop:Generator_ColumnPropNameInRow="idDeatail" msprop:Generator_ColumnPropNameInTable="idDeatailColumn" msprop:Generator_UserColumnName="idDeatail" type="xs:int" />
+              <xs:element name="caneva" msprop:Generator_ColumnVarNameInTable="columncaneva" msprop:Generator_ColumnPropNameInRow="caneva" msprop:Generator_ColumnPropNameInTable="canevaColumn" msprop:Generator_UserColumnName="caneva">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:programmes" />
+      <xs:field xpath="mstns:id" />
+      <xs:field xpath="mstns:idCat" />
+      <xs:field xpath="mstns:num" />
+      <xs:field xpath="mstns:idDeatail" />
+    </xs:unique>
+    <xs:unique name="DataTable1_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:id" />
+      <xs:field xpath="mstns:idCat" />
+      <xs:field xpath="mstns:num" />
+      <xs:field xpath="mstns:idDeatail" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

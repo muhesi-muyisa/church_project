@@ -26,14 +26,10 @@ namespace appProramme_messe
         {
             if(txtId.Text!="")
             {
-                try 
-                {
-                    // TODO: cette ligne de code charge les données dans la table 'DataSet1.Programmess'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
-                this.ProgrammessTableAdapter.Fill(this.DataSet1.Programmess,int.Parse(txtId.Text));
+                // TODO: cette ligne de code charge les données dans la table 'DataSet1.DataTable1'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
+            this.DataTable1TableAdapter.Fill(this.DataSet1.DataTable1,int.Parse(txtId.Text));
 
-                this.reportViewer1.RefreshReport();
-                }
-                catch (Exception xe) { MessageBox.Show(xe.Message); }
+            this.reportViewer1.RefreshReport();
             }
         }
     }

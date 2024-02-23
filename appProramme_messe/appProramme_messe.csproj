@@ -92,6 +92,11 @@
     <Compile Include="controlsUser\gestion_user.Designer.cs">
       <DependentUpon>gestion_user.cs</DependentUpon>
     </Compile>
+    <Compile Include="dat.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dat.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -197,6 +202,18 @@
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Report2.rdlc" />
     <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="Report4.rdlc" />
+    <None Include="dat.xsc">
+      <DependentUpon>dat.xsd</DependentUpon>
+    </None>
+    <None Include="dat.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dat.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dat.xss">
+      <DependentUpon>dat.xsd</DependentUpon>
+    </None>
     <None Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
